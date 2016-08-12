@@ -6,7 +6,10 @@ import com.iic.model.Status;
 import com.sun.xml.internal.ws.handler.HandlerException;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 
 /**
@@ -30,11 +33,12 @@ public class LoginController {
 //        else throw new HandlerException("no such user",new RuntimeException());
 //    }
 
-    @RequestMapping(value = "/credentials/", method = RequestMethod.PUT)
-    public Status getByUseNameAndPassword(@RequestBody Login login)
+    @RequestMapping(value = "/credentials/", method = RequestMethod.PUT,consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    public  Status getByUseNameAndPassword(@RequestBody Login login)
     {
         try
         {
+
             String user=login.getUsername();
             String pass=login.getPassword();
             Login loginser=loginservice.findByusernameAndPassword(user, pass);

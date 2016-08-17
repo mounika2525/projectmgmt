@@ -5,6 +5,8 @@ import com.iic.model.Login;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * Created by mounika on 09/08/16.
  */
@@ -15,7 +17,7 @@ public class LoginServiceImpl implements LoginService {
 
 
     @Override
-    public Login findByusernameAndPassword(String username, String password) {
+    public List<Login> findByusernameAndPassword(String username, String password) {
         return loginRepository.findByusernameAndPassword(username, password);
     }
 

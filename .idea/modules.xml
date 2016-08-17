@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/pmtool.iml" filepath="$PROJECT_DIR$/pmtool.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PMtool.iml" filepath="$PROJECT_DIR$/PMtool.iml" />
     </modules>
   </component>
 </project>

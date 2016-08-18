@@ -1,7 +1,7 @@
-package com.iic.Service;
+package com.common.Service;
 
-import com.iic.Repository.LoginRepository;
-import com.iic.model.Login;
+import com.common.Repository.LoginRepository;
+import com.common.model.Login;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,6 +20,4 @@ public class LoginServiceImpl implements LoginService {
     public List<Login> findByusernameAndPassword(String username, String password) {
         return loginRepository.findByusernameAndPassword(username, password);
     }
-
-
 }

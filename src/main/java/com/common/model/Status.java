@@ -1,4 +1,4 @@
-package com.iic.model;
+package com.common.model;
 
 /**
  * Created by mounika on 11/08/16.

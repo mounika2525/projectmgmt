@@ -1,39 +1,35 @@
-package com.iic.model;
-
-import org.springframework.boot.autoconfigure.domain.EntityScan;
+package com.common.model;
 
 import javax.persistence.*;
 
 /**
- * Created by mounika on 09/08/16.
+ * Created by mounika on 10/08/16.
  */
-
 @Entity
 @Table(name="LOGIN")
-public class Login {
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column
-    private Long id;
+    private int id;
     @Column
     private String username;
     @Column
     private String password;
 
-    public Login() {
+    public User() {
     }
 
-    public Login(Long  id,String username, String password) {
-        this.id=id;
+    public User(String username, String password) {
         this.username = username;
         this.password = password;
     }
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

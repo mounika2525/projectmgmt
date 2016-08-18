@@ -1,12 +1,9 @@
-package com.iic.Service;
+package com.common.Service;
 
-import com.iic.Repository.UserRepository;
-import com.iic.model.User;
+import com.common.Repository.UserRepository;
+import com.common.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestBody;
-
-import java.util.List;
 
 /**
  * Created by mounika on 10/08/16.
@@ -20,10 +17,10 @@ public class UserSerivceImpl implements  UserService {
     @Override
     public String insert(User user) {
         try {
-            User obj = new User();
-            obj.setUsername(user.getUsername());
-            obj.setPassword(user.getPassword());
-            userRepository.save(obj);
+            User user1 = new User();
+            user1.setUsername(user.getUsername());
+            user1.setPassword(user.getPassword());
+            userRepository.save(user1);
 
 
         } catch (Exception ex) {

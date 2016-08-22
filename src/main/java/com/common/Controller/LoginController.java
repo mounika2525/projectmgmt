@@ -53,19 +53,36 @@ public class LoginController {
 //    }
 
     @RequestMapping(value = "/credential/", method = RequestMethod.GET)
-public ResponseEntity<List<Login>> getByUseNameAndPassword(@RequestParam String username,@RequestParam String password)
+//public ResponseEntity<List<Login>> getByUseNameAndPassword(@RequestParam String username,@RequestParam String password)
+//    {
+//
+//
+//        List<Login> logins=loginservice.findByusernameAndPassword(username,password);
+//        if(logins.isEmpty()) {
+//            return new ResponseEntity<List<Login>>(HttpStatus.OK);
+//
+//        }
+//        return new ResponseEntity<List<Login>>(logins, HttpStatus.OK);
+//    }
+
+
+    public Login ogin(@PathVariable Login login)
     {
-
-
-        List<Login> logins=loginservice.findByusernameAndPassword(username,password);
-        if(logins.isEmpty()) {
-            return new ResponseEntity<List<Login>>(HttpStatus.OK);
+        if(login.getUsername()!=null && login.getPassword()!=null)
+        {
+loginservice.findByusernameAndPassword(login.getUsername(),login.getPassword());
+            return  login;
 
         }
-        return new ResponseEntity<List<Login>>(logins, HttpStatus.OK);
+        return null;
     }
 
+
+
+
 }
+
+
 
 
 

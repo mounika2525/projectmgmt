@@ -2,9 +2,9 @@ package com.common.Service;
 
 import com.common.Repository.RegistrationRepository;
 import com.common.model.Registration;
-import com.common.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 
 /**
  * Created by mounika on 22/08/16.
@@ -15,7 +15,6 @@ public class RegistrationServiceImpl implements RegistrationService {
     private RegistrationRepository registrationRepository;
 
 
-    @Override
     public String insert(Registration registration) {
 
         try {
@@ -28,7 +27,7 @@ public class RegistrationServiceImpl implements RegistrationService {
         } catch (Exception ex) {
             return "Error creating the user....: " + ex.toString();
         }
-        return "User succesfully created! (id = " + registration.getUserid() + ")";
+        return "User succesfully created!";
 
 
     }

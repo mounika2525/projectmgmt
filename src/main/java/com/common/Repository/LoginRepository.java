@@ -13,8 +13,8 @@ import java.util.List;
 @Repository
 public interface LoginRepository extends JpaRepository<Login,Long> {
 
-    @Query("select l from Login l where l.username = ?1 and l.password = ?2")
-    public  List<Login> findByusernameAndPassword(String username,String password);
+    @Query("select l from Login l where l.email = ?1 and l.password = ?2")
+    public  List<Login> findByemailAndPassword(String email,String password);
 
 
 }

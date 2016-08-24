@@ -16,12 +16,11 @@ public class RegistrationController {
 @Autowired
     private RegistrationService registrationService;
 
-
-    @ResponseBody
-    @ResponseStatus(value = HttpStatus.OK)
+    @CrossOrigin(origins = "*")
     @RequestMapping(value = "/insert/", method = RequestMethod.PUT)
     public String insertRegistration(@RequestBody Registration registration)
     {
         return registrationService.insert(registration);
     }
+
 }

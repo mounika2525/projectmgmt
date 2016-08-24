@@ -9,40 +9,39 @@ import javax.persistence.*;
  */
 
 @Entity
-@Table(name="LOGIN")
+@Table(name="USERS")
 public class Login {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column
-    private Long id;
+    private Long userid;
     @Column
-    private String username;
+    private String email;
     @Column
     private String password;
 
     public Login() {
     }
 
-    public Login(Long  id,String username, String password) {
-        this.id=id;
-        this.username = username;
+    public Login(String email, String password) {
+        this.email = email;
         this.password = password;
     }
 
-    public Long getId() {
-        return id;
+    public Long getUserid() {
+        return userid;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setUserid(Long userid) {
+        this.userid = userid;
     }
 
-    public String getUsername() {
-        return username;
+    public String getEmail() {
+        return email;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getPassword() {

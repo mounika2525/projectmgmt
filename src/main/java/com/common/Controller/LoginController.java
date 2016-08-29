@@ -26,6 +26,7 @@ public class LoginController {
     public List<Login> find() {
 
         return loginRepository.findAll();
+
     }
 
 

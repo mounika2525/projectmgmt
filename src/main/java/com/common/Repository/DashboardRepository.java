@@ -6,6 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -14,7 +15,7 @@ import java.util.List;
 @Repository
 public interface DashboardRepository extends JpaRepository<Dashboard,Long> {
 
-@Query("select t from TIMESHEET_DETAIL t where t.userid=?1 and t.workday=sysdate")
-    public List<Dashboard>findByUserId(@Param("userid") int userid);
+    @Query("select t from Dashboard t where t.userid= ?1 and t.workday=current_date ")
+    List<Dashboard> findByUserId(@Param("userid") int userid);
 
 }

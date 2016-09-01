@@ -15,7 +15,7 @@ import java.util.List;
 @Repository
 public interface DashboardRepository extends JpaRepository<Dashboard,Long> {
 
-    @Query("select t from Dashboard t where t.userid= ?1 and t.workday=current_date ")
-    List<Dashboard> findByUserId(@Param("userid") int userid);
+    @Query("select t from Dashboard t where t.userid= ?1 and t.workday=?2")
+    List<Dashboard> findByUserId(@Param("userid") int userid,@Param("workday") Date workday);
 
 }

@@ -10,6 +10,6 @@ import java.util.List;
  * Created by mounika on 24/08/16.
  */
 public interface DashboardService {
-     List<Dashboard> findByUserId(int userid);
+     List<Dashboard> findByUserId(int userid,Date workday);
 
 }

@@ -30,9 +30,9 @@ import java.util.List;
     }
 
     @Override
-    public List<Dashboard> findByUserId(int userid)
+    public List<Dashboard> findByUserId(int userid,Date workday)
     {
-        return dashboardRepository.findByUserId(userid);
+        return dashboardRepository.findByUserId(userid,workday);
     }
 
 }

@@ -4,6 +4,7 @@ import com.common.Repository.DashboardRepository;
 import com.common.Service.DashboardService;
 import com.common.model.Dashboard;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
@@ -36,9 +37,10 @@ public class DashboardController {
 
 
     @CrossOrigin(origins = "*")
-    @RequestMapping(value = "/user/{userid}", method = RequestMethod.GET)
-    public List<Dashboard> getByUserId(@PathVariable int userid) {
-        return dashboardService.findByUserId(userid);
+    @RequestMapping(value = "/user/{userid}/{workday}", method = RequestMethod.GET)
+    public List<Dashboard> getByUserId(@PathVariable int userid,@PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd") Date workday) {
+
+        return dashboardService.findByUserId(userid,workday);
 
     }
 

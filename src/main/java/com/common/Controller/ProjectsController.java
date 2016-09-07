@@ -15,7 +15,7 @@ import java.util.List;
  * Created by mounika on 01/09/16.
  */
 @RestController
-@RequestMapping(value = "/Projects")
+@RequestMapping(value = "/project_mgmt")
 public class ProjectsController {
     @Autowired
     private ProjectsRepository projectsRepository;

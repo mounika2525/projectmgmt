@@ -12,7 +12,7 @@ import java.util.List;
  * Created by mounika on 01/09/16.
  */
 @RestController
-@RequestMapping(value = "/Task")
+@RequestMapping(value = "/project_mgmt")
 public class TaskController {
 @Autowired
     private TaskRepository taskRepository;

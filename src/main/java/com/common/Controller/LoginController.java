@@ -16,13 +16,13 @@ import java.util.List;
  */
 
 @RestController
-@RequestMapping("/login")
+@RequestMapping("/project_mgmt")
 public class LoginController {
     @Autowired
     private LoginRepository loginRepository;
 
     @CrossOrigin(origins = "*")
-    @RequestMapping(value = "/credential/", method = RequestMethod.GET)
+    @RequestMapping(value = "/login/", method = RequestMethod.GET)
     public List<Login> find() {
 
         return loginRepository.findAll();

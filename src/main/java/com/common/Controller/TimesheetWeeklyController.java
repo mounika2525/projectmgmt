@@ -9,13 +9,13 @@ import org.springframework.web.bind.annotation.*;
  * Created by mounika on 24/08/16.
  */
 @RestController
-@RequestMapping("/timesheetweekly")
+@RequestMapping("/project_mgmt")
 public class TimesheetWeeklyController {
     @Autowired
     private TimesheetWeeklyService timesheetWeeklyService;
 
     @CrossOrigin(origins = "*")
-    @RequestMapping(value="/trackTime/", method = RequestMethod.PUT)
+    @RequestMapping(value="/timesheetweekly/", method = RequestMethod.PUT)
     public String insertTimesheetWeekly(@RequestBody TimesheetWeekly timesheetWeekly)
     {
         return timesheetWeeklyService.insert(timesheetWeekly);

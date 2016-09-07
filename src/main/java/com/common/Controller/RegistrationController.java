@@ -10,14 +10,14 @@ import org.springframework.web.bind.annotation.*;
  * Created by mounika on 22/08/16.
  */
 @RestController
-@RequestMapping("/registration")
+@RequestMapping("/project_mgmt")
 public class RegistrationController {
 
 @Autowired
     private RegistrationService registrationService;
 
     @CrossOrigin(origins = "*")
-    @RequestMapping(value = "/insert/", method = RequestMethod.PUT)
+    @RequestMapping(value = "/register/", method = RequestMethod.PUT)
     public String insertRegistration(@RequestBody Registration registration)
     {
         return registrationService.insert(registration);

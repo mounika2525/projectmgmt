@@ -14,19 +14,14 @@ import java.util.List;
  * Created by mounika on 24/08/16.
  */
 @RestController
-@RequestMapping(value = "/dashboard")
+@RequestMapping(value = "/project_mgmt")
 public class DashboardController {
 
-   // private DashboardRepository dashboardRepository;
+
     private DashboardService dashboardService;
 
 
-//    @Autowired
-//    public DashboardController(DashboardRepository dashboardRepository,DashboardService dashboardService) {
-//        this.dashboardRepository = dashboardRepository;
-//        this.dashboardService=dashboardService;
-//
-//    }
+
 
     @Autowired
     public DashboardController(DashboardService dashboardService) {

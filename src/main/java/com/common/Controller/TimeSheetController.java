@@ -10,14 +10,14 @@ import org.springframework.web.bind.annotation.*;
  * Created by mounika on 23/08/16.
  */
 @RestController
-@RequestMapping("/timesheet")
+@RequestMapping("/project_mgmt")
 public class TimeSheetController {
     @Autowired
     private TimesheetService timesheetService;
 
 
     @CrossOrigin(origins = "*")
-    @RequestMapping(value="/trackTime/", method = RequestMethod.PUT)
+    @RequestMapping(value="/tracktime/", method = RequestMethod.PUT)
     public String insertTimesheet(@RequestBody Timesheet timesheet)
     {
         return timesheetService.insert(timesheet);
